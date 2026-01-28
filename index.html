@@ -3,58 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuristic Balance Dashboard</title>
+    <title>Neon Cube Dashboard Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div class="bg-grid"></div>
+    <div class="scanline"></div>
+
     <div class="container">
-        <header class="header-box">
-            <h1>PAYPAL / DASHBOARD</h1>
-            <div class="user-info">
-                <span>USER: </span>
-                <span id="user-email-display">GUEST</span>
-                <div class="status-indicator"></div>
+        <header class="header-box decoration-corners">
+            <div class="header-content">
+                <h1>/// PAYPAL KIBER-PANEL ///</h1>
+                <div class="user-info">
+                    <span class="tech-label">OPERATOR:</span>
+                    <span id="user-email-display" class="glow-text">GUEST</span>
+                    <div class="status-indicator pulse-anim"></div>
+                </div>
             </div>
         </header>
 
         <div class="grid-layout">
             
-            <div class="card balance-card">
-                <h3>ÜMUMİ BALANS</h3>
-                <h1 id="total-balance">--- $</h1>
-                <p class="crypto-text">DATA_FETCHING...</p>
-            </div>
-
-            <div class="card income-card">
-                <h3>BU HƏFTƏ GƏLİR</h3>
-                <h2 id="weekly-income">--- $</h2>
-                <div class="arrow up">▲ +12%</div>
-            </div>
-
-            <div class="card expense-card">
-                <h3>BU HƏFTƏ XƏRC</h3>
-                <h2 id="weekly-expense">--- $</h2>
-                <div class="arrow down">▼ -4%</div>
-            </div>
-
-            <div class="card chart-card">
-                <h3>HƏFTƏLİK STATİSTİKA</h3>
-                <div class="chart-container">
-                    <div class="bar-box"><div class="bar" style="height: 40%"></div><span>B.E</span></div>
-                    <div class="bar-box"><div class="bar" style="height: 70%"></div><span>Ç.A</span></div>
-                    <div class="bar-box"><div class="bar" style="height: 50%"></div><span>Ç.</span></div>
-                    <div class="bar-box"><div class="bar" style="height: 90%"></div><span>C.A</span></div>
-                    <div class="bar-box"><div class="bar" style="height: 30%"></div><span>C.</span></div>
-                    <div class="bar-box"><div class="bar" style="height: 60%"></div><span>Ş.</span></div>
-                    <div class="bar-box"><div class="bar" style="height: 80%"></div><span>B.</span></div>
+            <div class="card balance-card decoration-corners main-display card-hover">
+                <div class="card-inner decoration-ring">
+                    <h3>/// ÜMUMİ AKTİVLƏR ///</h3>
+                    <div class="balance-circle-container">
+                        <div class="rotating-ring ring-1"></div>
+                        <div class="rotating-ring ring-2-rev"></div>
+                        <h1 id="total-balance" class="counter">0.00 $</h1>
+                    </div>
+                    <p class="crypto-text">SİSTEM STATUSU: <span class="blink">ONLINE</span></p>
                 </div>
             </div>
 
-            <div class="card history-card">
-                <h3>SON ƏMƏLİYYATLAR</h3>
-                <ul id="transaction-list">
-                    </ul>
+            <div class="card income-card decoration-corners card-hover">
+                <div class="card-inner">
+                    <h3>GƏLİR (HƏFTƏLİK)</h3>
+                    <h2 id="weekly-income" class="counter">0.00 $</h2>
+                    <div class="tech-badge up">▲ +12% BOOST</div>
+                </div>
+            </div>
+
+            <div class="card expense-card decoration-corners card-hover">
+                <div class="card-inner">
+                    <h3>XƏRC (HƏFTƏLİK)</h3>
+                    <h2 id="weekly-expense" class="counter">0.00 $</h2>
+                    <div class="tech-badge down">▼ -4% DRAIN</div>
+                </div>
+            </div>
+
+            <div class="card chart-card decoration-corners card-hover">
+                <div class="card-inner">
+                    <h3>/// HƏFTƏLİK STATİSTİKA HESABATI ///</h3>
+                    <div class="chart-container">
+                        <div class="bar-box"><div class="bar-fill" style="--h: 40%"></div><span class="tech-label">B.E</span></div>
+                        <div class="bar-box"><div class="bar-fill" style="--h: 70%"></div><span class="tech-label">Ç.A</span></div>
+                        <div class="bar-box"><div class="bar-fill" style="--h: 50%"></div><span class="tech-label">Ç.</span></div>
+                        <div class="bar-box"><div class="bar-fill" style="--h: 90%"></div><span class="tech-label">C.A</span></div>
+                        <div class="bar-box"><div class="bar-fill" style="--h: 30%"></div><span class="tech-label">C.</span></div>
+                        <div class="bar-box"><div class="bar-fill" style="--h: 60%"></div><span class="tech-label">Ş.</span></div>
+                        <div class="bar-box"><div class="bar-fill" style="--h: 80%"></div><span class="tech-label">B.</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card history-card decoration-corners card-hover">
+                <div class="card-inner">
+                    <h3>/// SON ƏMƏLİYYAT JURNALI ///</h3>
+                    <ul id="transaction-list" class="tech-list">
+                        </ul>
+                </div>
             </div>
         </div>
     </div>
