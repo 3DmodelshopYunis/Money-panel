@@ -1,0 +1,161 @@
+/* Futuristik Monoxrom Üslub */
+:root {
+    --primary-color: #00f3ff; /* Neon Cyan */
+    --bg-color: #050505;      /* Tünd Qara */
+    --grid-bg: #0a0a0a;
+    --border-color: #00f3ff;
+    --font-main: 'Courier New', Courier, monospace; /* Monospaced şrift */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Header */
+.header-box {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    display: inline-block;
+    margin-left: 10px;
+    box-shadow: 0 0 10px var(--primary-color);
+    animation: blink 1s infinite;
+}
+
+/* Grid Sistemi */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+/* Kart Dizaynı (Kublar) */
+.card {
+    border: 1px solid var(--border-color);
+    background-color: var(--grid-bg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Kartların Yerləşməsi */
+.balance-card {
+    grid-column: span 2; /* 2 yer tutur */
+    height: 150px;
+}
+
+.income-card, .expense-card {
+    grid-column: span 1;
+    height: 150px;
+    text-align: center;
+}
+
+.chart-card {
+    grid-column: span 2;
+    height: 300px;
+}
+
+.history-card {
+    grid-column: span 2;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* Mətn Stilləri */
+h1 { font-size: 2.5rem; margin: 10px 0; }
+h2 { font-size: 1.8rem; margin: 10px 0; }
+h3 { font-size: 0.9rem; opacity: 0.8; border-bottom: 1px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 10px; }
+
+.crypto-text {
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+.arrow { font-size: 0.8rem; }
+.up { } /* Rəng eyni qalır, monoxrom tələbi üçün */
+
+/* Chart (Sadə CSS Qrafik) */
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.bar-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.bar {
+    width: 20px;
+    background-color: var(--primary-color);
+    opacity: 0.2;
+    transition: height 1s ease;
+}
+.bar:hover { opacity: 1; cursor: pointer; }
+
+.bar-box span {
+    margin-top: 5px;
+    font-size: 0.7rem;
+}
+
+/* Siyahı */
+ul { list-style: none; }
+li {
+    border-bottom: 1px dashed var(--primary-color);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+/* Animasiya */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Mobil Uyğunluq */
+@media (max-width: 768px) {
+    .grid-layout { grid-template-columns: 1fr; }
+    .balance-card, .chart-card, .history-card { grid-column: span 1; }
+}
