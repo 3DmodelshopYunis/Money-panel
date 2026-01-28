@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Balance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header-box">
+            <h1>PAYPAL / DASHBOARD</h1>
+            <div class="user-info">
+                <span>USER: </span>
+                <span id="user-email-display">GUEST</span>
+                <div class="status-indicator"></div>
+            </div>
+        </header>
+
+        <div class="grid-layout">
+            
+            <div class="card balance-card">
+                <h3>ÜMUMİ BALANS</h3>
+                <h1 id="total-balance">--- $</h1>
+                <p class="crypto-text">DATA_FETCHING...</p>
+            </div>
+
+            <div class="card income-card">
+                <h3>BU HƏFTƏ GƏLİR</h3>
+                <h2 id="weekly-income">--- $</h2>
+                <div class="arrow up">▲ +12%</div>
+            </div>
+
+            <div class="card expense-card">
+                <h3>BU HƏFTƏ XƏRC</h3>
+                <h2 id="weekly-expense">--- $</h2>
+                <div class="arrow down">▼ -4%</div>
+            </div>
+
+            <div class="card chart-card">
+                <h3>HƏFTƏLİK STATİSTİKA</h3>
+                <div class="chart-container">
+                    <div class="bar-box"><div class="bar" style="height: 40%"></div><span>B.E</span></div>
+                    <div class="bar-box"><div class="bar" style="height: 70%"></div><span>Ç.A</span></div>
+                    <div class="bar-box"><div class="bar" style="height: 50%"></div><span>Ç.</span></div>
+                    <div class="bar-box"><div class="bar" style="height: 90%"></div><span>C.A</span></div>
+                    <div class="bar-box"><div class="bar" style="height: 30%"></div><span>C.</span></div>
+                    <div class="bar-box"><div class="bar" style="height: 60%"></div><span>Ş.</span></div>
+                    <div class="bar-box"><div class="bar" style="height: 80%"></div><span>B.</span></div>
+                </div>
+            </div>
+
+            <div class="card history-card">
+                <h3>SON ƏMƏLİYYATLAR</h3>
+                <ul id="transaction-list">
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
